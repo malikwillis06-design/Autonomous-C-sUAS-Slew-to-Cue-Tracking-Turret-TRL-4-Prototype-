@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['drone']
+
+roboflow:
+  workspace: itzak
+  project: drone-detection-6f8tk
+  version: 8
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/itzak/drone-detection-6f8tk/dataset/8

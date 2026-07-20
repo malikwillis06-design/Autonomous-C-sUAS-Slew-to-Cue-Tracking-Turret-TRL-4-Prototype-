@@ -1,0 +1,4 @@
+onnxruntime-gpu
+opencv-python
+pyserial
+numpy
