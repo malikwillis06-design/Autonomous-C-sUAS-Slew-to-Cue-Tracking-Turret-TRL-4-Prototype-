@@ -8,7 +8,7 @@ This repository houses the source code, hardware architecture, and firmware for 
 
 *(Insert a high-quality GIF of your turret physically tracking a target side-by-side with your MATLAB/Python HUD tracking feed here)*
 
-> **Live Demo Video:** [Click here to watch the 60-Second Technical Walkthrough & PID Control Demonstration](YOUR_YOUTUBE_OR_VIMEO_LINK)
+> **Live Demo Video:** https://youtube.com/shorts/hJJrJ_sbNVY?si=u6pjSPRpaa84ya5z
 
 ## 🎯 Core Engineering Features
 
@@ -49,7 +49,7 @@ Create and activate a virtual environment:Bash   python -m venv venv
    
 Install the required computer vision and robotics packages:Bash   pip install pyserial opencv-python ultralytics numpy
    
-Firmware (Arduino R4 Setup)Connect your Arduino Uno R4 Minima to your PC.Open firmware/turret_actuator_binary.ino in the Arduino IDE.Install the Adafruit PWM Servo Driver Library via the Library Manager.Upload the code to your Arduino.Check Device Manager to verify your Arduino's assigned COM port.💻 Running the SystemUpdate the COM_PORT and CAMERA_INDEX variables in src/turret_master_modern.py to match your PC's environment.Run the master tracking script:Bash   python src/turret_master_modern.py
+Firmware (Arduino R4 Setup)Connect your Arduino Uno R4 Minima to your PC.Open firmware/turret_actuator_binary.ino in the Arduino IDE.Install the Adafruit PWM Servo Driver Library via the Library Manager.Upload the code to your Arduino.Check Device Manager to verify your Arduino's assigned COM port.💻 Running the SystemUpdate the COM_PORT and CAMERA_INDEX variables in src/turret_master.py to match your PC's environment.Run the master tracking script:Bash   python src/turret_master.py
    
 Focus your camera on a target. Press q in the window to stop tracking and park the servos safely at their neutral coordinates (375, 375).📁 Repository StructurePlaintextautonomous-target-tracking-turret/
 │
@@ -57,8 +57,7 @@ Focus your camera on a target. Press q in the window to stop tracking and park t
 │   └── turret_actuator_binary.ino      # Arduino R4 firmware (reads binary payloads)
 │
 ├── src/
-│   ├── turret_master_modern.py         # Production Python tracking controller (YOLO)
-│   ├── turret_master_optimized.m       # Optimized MATLAB tracking controller (KLT)
+│   ├── turret_master.py         # Production Python tracking controller (YOLO)
 │   ├── train_model.py                  # AI training execution script
 │   └── find_camera.py                  # Windows camera index scanner utility
 │
